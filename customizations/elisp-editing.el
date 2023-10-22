@@ -20,3 +20,8 @@
 ;; https://github.com/Fanael/rainbow-delimiters
 (setup (:package rainbow-delimiters)
   (:hook-into prog-mode))
+
+;; company provides auto-completion for elisp
+(setup (:package company)
+  (:hook-into emacs-lisp-mode
+	      ielm-auto-complete))

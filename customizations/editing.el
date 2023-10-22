@@ -72,3 +72,10 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+(use-package command-log-mode
+  :init
+  :ensure t
+  :config
+  (global-command-log-mode)
+  (clm/open-command-log-buffer))

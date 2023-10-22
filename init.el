@@ -17,7 +17,7 @@
     (package-refresh-contents))
   (package-install 'setup))
 (require 'setup)
-
+(require 'use-package)
 ;; All other features are loaded one by one from
 ;; the customizations directory. Read those files
 ;; to find out what they do.
