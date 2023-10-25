@@ -1,6 +1,6 @@
 ;; javascript / html
-(setup (:package tagedit)
-  (:hook-into html-mode))
+;(setup (:package tagedit)
+ ; (:hook-into html-mode))
 
 (setup subword-mode
   (:hook-into js-mode

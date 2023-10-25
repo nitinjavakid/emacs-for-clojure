@@ -78,4 +78,31 @@
   :ensure t
   :config
   (global-command-log-mode)
-  (clm/open-command-log-buffer))
+  ;(clm/open-command-log-buffer)
+  )
+
+(use-package org-ac
+  :init
+  :ensure t
+  :config
+  (org-ac/config-default))
+  
+(use-package org-re-reveal
+  :init
+  :ensure t)
+
+(use-package graphviz-dot-mode
+  :init
+  :ensure t
+  :config
+  (add-to-list 'org-src-lang-modes '("dot" . graphviz-dot)))
+
+(use-package gnuplot 
+  :init
+  :ensure t
+  :config
+  (org-babel-do-load-languages
+                      'org-babel-load-languages
+                      '((emacs-lisp . t)
+                        (dot . t)
+                        (gnuplot . t))))
