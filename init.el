@@ -43,3 +43,4 @@
 
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)
+(put 'upcase-region 'disabled nil)

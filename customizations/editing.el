@@ -81,11 +81,11 @@
   ;(clm/open-command-log-buffer)
   )
 
-(use-package org-ac
-  :init
-  :ensure t
-  :config
-  (org-ac/config-default))
+;; (use-package org-ac
+;;   :init
+;;   :ensure t
+;;   :config
+;;   (org-ac/config-default))
   
 (use-package org-re-reveal
   :init
@@ -105,4 +105,32 @@
                       'org-babel-load-languages
                       '((emacs-lisp . t)
                         (dot . t)
-                        (gnuplot . t))))
+                        (gnuplot . t)
+                        (org . t)
+                        (python . t))))
+
+(use-package org
+  :init
+  :ensure t
+  :config
+  (add-to-list 'org-modules 'org-habit t))
+
+(use-package org-habit-stats
+  :init
+  :ensure t
+  :config
+  (setq org-habit-show-habits-only-for-today nil))
+
+(use-package org-download
+  :init
+  :ensure t
+  :config
+  (setq org-download-method 'directory)
+  (setq org-download-image-dir "./images"))
+
+(use-package company-jedi
+  :init
+  :ensure t
+  :config
+  (add-hook 'python-mode-hook 
+            (lambda () (add-to-list 'company-backends 'company-jedi))))

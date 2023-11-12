@@ -17,8 +17,7 @@
 (setq-default frame-title-format "%b (%f)")
 
 ;; initial frame height and width
-(add-to-list 'default-frame-alist '(height . 45))
-(add-to-list 'default-frame-alist '(width . 100))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
